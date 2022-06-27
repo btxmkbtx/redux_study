@@ -9,7 +9,7 @@ export const createDecrementAction = (data) => ({ type: DECREMENT, data });
 
 //异步action，就是指action的值为函数,异步action中一般都会调用同步action，异步action不是必须要用的。
 export const createIncrementAsyncAction = (data, time) => {
-  // store在处理异步action的时候会自动给我们传入两个参数
+  // thunk在处理异步action的时候会自动给我们传入两个参数
   // 参数一:dispatch；用于帮我们在异步action中触发其他同步action。
   // 参数二:getPreState；返回修改前的state。
   return (dispatch, getPreState) => {
